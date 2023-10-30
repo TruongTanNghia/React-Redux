@@ -1,4 +1,4 @@
-import * as TYPES from "./ActionType";
+import * as TYPES from './ActionType';
 
 //* Add todo
 export const addTodoPending = () => ({
@@ -23,5 +23,18 @@ export const removeTodosuccess = (todoId) => ({
 });
 export const removeTodoError = (error) => ({
   type: TYPES.REMOVE_TODO_ERROR,
+  payload: error,
+});
+
+//* Edit Todo
+export const editTodoPending = () => ({
+  type: TYPES.EDIT_TODO_PENDING,
+});
+export const editTodosuccess = (todoUpdate) => ({
+  type: TYPES.EDIT_TODO_SUCCESS,
+  payload: todoUpdate,
+});
+export const editTodoError = (error) => ({
+  type: TYPES.EDIT_TODO_ERROR,
   payload: error,
 });
